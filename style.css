@@ -1,0 +1,247 @@
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color: #1a6496;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ── */
+header {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.header-info h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.header-info h1 .chinese {
+  font-size: 1.3rem;
+  color: #666;
+  margin-left: 8px;
+}
+
+.title {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2px;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.links {
+  font-size: 0.95rem;
+}
+
+.links .sep {
+  color: #ccc;
+  margin: 0 6px;
+}
+
+/* ── Main ── */
+main {
+  padding: 40px 0;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #111;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+section p {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* ── Timeline Entries ── */
+.entry {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.entry-left {
+  min-width: 145px;
+  padding-top: 2px;
+}
+
+.entry-date {
+  font-size: 0.85rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+.entry-title {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.entry-org {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.entry-desc {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ── Publications ── */
+.pub-note {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.pub-entry {
+  padding: 16px 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+.pub-title {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.pub-authors {
+  font-size: 0.92rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.award {
+  font-style: normal;
+  font-weight: 700;
+  color: #b8860b;
+  margin-left: 8px;
+}
+
+.pub-links {
+  font-size: 0.88rem;
+}
+
+.pub-links a {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 1px solid #1a6496;
+  border-radius: 3px;
+  margin-right: 6px;
+  font-size: 0.82rem;
+}
+
+/* ── Honors ── */
+#honors ul {
+  list-style: none;
+  padding: 0;
+}
+
+#honors ul li {
+  padding: 6px 0 6px 18px;
+  position: relative;
+  color: #444;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+#honors ul li::before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  color: #aaa;
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #aaa;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .header-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .entry {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .entry-left {
+    min-width: unset;
+  }
+}
